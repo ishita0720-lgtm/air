@@ -1,0 +1,67 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Harbourline Cloud POS Migration</title>
+<style>
+:root{--bg:#f6f7f9;--fg:#1b2333;--muted:#5a6478;--line:#d9dee7;--accent:#1f3864;--surface:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#12161f;--fg:#e6e9ef;--muted:#9aa4b8;--line:#2a3142;--accent:#8fb0e8;--surface:#1a2030}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--fg)}
+header{background:var(--accent);color:#fff;padding:2.5rem 1rem 1.5rem}
+header div,main,nav div{max-width:1100px;margin:0 auto}
+header h1{margin:0 0 .3rem;font-size:2rem;text-wrap:balance}
+header p{margin:0;opacity:.9}
+nav{position:sticky;top:0;background:var(--surface);border-bottom:1px solid var(--line);z-index:5;padding:.5rem 1rem}
+nav div{display:flex;gap:.25rem 1rem;flex-wrap:wrap}
+nav a{color:var(--accent);text-decoration:none;font-size:.9rem;padding:.2rem 0}
+nav a:hover{text-decoration:underline}
+main{padding:1rem}
+section{padding:2rem 0;border-bottom:1px solid var(--line)}
+h2{margin:0 0 1rem;font-size:1.5rem;color:var(--accent)}
+h3{margin:1.2rem 0 .3rem;font-size:1rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+h3:first-child{margin-top:0}
+.cols{display:grid;grid-template-columns:1fr;gap:1.5rem}
+@media(min-width:900px){.cols:has(figure){grid-template-columns:1fr 1fr}}
+.txt{min-width:0;max-width:65ch}
+figure{margin:0;min-width:0}
+figure img{width:100%;height:auto;border:1px solid var(--line);background:#fff}
+figcaption{font-size:.85rem;color:var(--muted);margin-top:.4rem}
+a{color:var(--accent)}
+footer{padding:1.5rem 1rem;text-align:center;color:var(--muted);font-size:.85rem}
+</style></head><body>
+<header><div><h1>Harbourline Cloud POS Migration</h1><p>BISY2004 Project Management, Assessment 2, Scenario B: Retail POS Migration</p></div></header>
+<nav><div><a href="#home">Home</a><a href="#charter">1. Project charter</a><a href="#stakeholders">2. Stakeholder analysis</a><a href="#wbs">3. Work breakdown structure</a><a href="#schedule">4. Schedule and critical path</a><a href="#risks">5. Risk register</a><a href="#budget">6. Budget</a><a href="#trello">7. Trello board</a><a href="#recommendation">8. Recommendation</a></div></nav>
+<main>
+<section id="home"><h2>Home</h2><div class="cols"><div class="txt"><p>Harbourline Retail is a fictional national chain with 180 stores and about 1,100 POS terminals. Its on-premise point-of-sale system reaches end of vendor support and cannot take newer payment methods. This project moves every store to a cloud-based POS in phases, before the Christmas trading freeze on 25 October 2026. Budget: AUD 4.2M.</p>
+<p><b>Tools used:</b> Microsoft Word for the charter, stakeholder analysis, WBS, schedule, risk register and budget. Trello for the task board.</p>
+<p><b>How the pages fit together:</b> The charter sets the objectives and limits. The stakeholder analysis shows who must be managed. The WBS lists all the work. The schedule puts that work in order and shows the critical path. The risk register shows what could go wrong on that path. The budget shows what can be spent on responses. The recommendation pulls these into decisions for the steering committee. The Trello board is where the work is tracked.</p>
+<p><b>Recommendation in one line:</b> Roll out in phases (pilot of 10 stores, then 40, 70 and 60), with go/no-go gates, early work on the high risks, and a rule to defer the last stores rather than deploy into the freeze.</p></div></div></section>
+<section id="charter"><h2>1. Project charter</h2><div class="cols"><div class="txt"><h3>What this shows</h3><p>The charter defines what the project is, why it is worth doing, and its limits: five objectives, scope, milestones, constraints and governance.</p>
+<ul><li>All 180 stores live by 15 October 2026.</li><li>No PCI DSS non-compliance findings at go-live.</li><li>Less than 0.5% of trading hours lost per store during cut-over.</li><li>At least 95% of store staff trained before their store goes live.</li><li>Total cost within AUD 4.2M (plus or minus 5%).</li><li>Constraint: trading freeze from 25 October 2026.</li></ul>
+<h3>How it connects</h3><p>Every other artefact is checked against the charter. The freeze date sets the schedule buffer, the objectives set the wave gates, and the budget total comes from here.</p>
+<h3>Decision it supports</h3><p>The steering committee approves scope and limits before work starts.</p></div><figure><a href="1-charter.png"><img src="1-charter.png" alt="Project charter (Word)"></a><figcaption>Project charter (Word). Click to enlarge.</figcaption></figure></div></section>
+<section id="stakeholders"><h2>2. Stakeholder analysis</h2><div class="cols"><div class="txt"><h3>What this shows</h3><p>Eleven stakeholders rated by power and interest, with an engagement approach for each: manage closely, keep satisfied, keep informed or monitor.</p>
+<ul><li>High power and high interest: the sponsor (COO), the CFO, IT Operations and the POS vendor. They get the most management time.</li><li>Store managers and staff have low power but feel the change most, so training and wave briefings are planned in detail.</li><li>The payment provider has high power and low interest, so it is kept satisfied with an early certification plan.</li></ul>
+<h3>How it connects</h3><p>The ratings feed the engagement plan and explain where risks come from: R4 (training), R5 (terminal delivery) and R7 (scope creep) trace to stakeholder groups.</p>
+<h3>Decision it supports</h3><p>Who sits on the steering committee and how much time the project manager spends with each group.</p></div><figure><a href="2-stakeholders.png"><img src="2-stakeholders.png" alt="Stakeholder analysis (Word)"></a><figcaption>Stakeholder analysis (Word). Click to enlarge.</figcaption></figure></div></section>
+<section id="wbs"><h2>3. Work breakdown structure</h2><div class="cols"><div class="txt"><h3>What this shows</h3><p>The scope broken into seven work packages with deliverables and an owner: project management, requirements and design, build and infrastructure, testing and compliance, training and change, pilot and rollout, hypercare and handover.</p>
+<h3>How it connects</h3><p>The same IDs appear in the schedule, the Trello cards and the risk register, so any item can be traced across the site. Each package has an owner role, so every risk and task has an accountable person.</p>
+<h3>Decision it supports</h3><p>Confirms nothing in scope is missing and sets the units the schedule and budget are built on.</p></div><figure><a href="3-wbs.png"><img src="3-wbs.png" alt="Work breakdown structure (Word)"></a><figcaption>Work breakdown structure (Word). Click to enlarge.</figcaption></figure></div></section>
+<section id="schedule"><h2>4. Schedule and critical path</h2><div class="cols"><div class="txt"><h3>What this shows</h3><p>A Gantt-style chart from February to October 2026. Red rows are the critical path: requirements and design, build, testing and compliance, the pilot and the three rollout waves.</p>
+<ul><li>Wave 3 finishes on 15 October. The freeze starts on 25 October, leaving about five working days of buffer (19 to 23 October).</li><li>Training is not on the critical path, but each wave cannot start until its stores are 95% trained, so it can become critical if it slips.</li></ul>
+<h3>How it connects</h3><p>The thin buffer before the freeze is why risk R10 (slippage into the freeze) is rated High. The wave order is the reason for the go/no-go gates in the recommendation.</p>
+<h3>Decision it supports</h3><p>Whether the plan is safe as it stands. It is not fully safe: one week of buffer needs a deferral rule.</p></div><figure><a href="4-schedule.png"><img src="4-schedule.png" alt="Schedule and critical path (Word)"></a><figcaption>Schedule and critical path (Word). Click to enlarge.</figcaption></figure></div></section>
+<section id="risks"><h2>5. Risk register</h2><div class="cols"><div class="txt"><h3>What this shows</h3><p>Ten risks scored by likelihood x impact (1 to 5 each), each with a response and an owner. Four are High: R2 ERP integration defects (16), R1 PCI DSS failure (15), R3 store network outage during cut-over (15) and R10 slippage into the trading freeze (15).</p>
+<h3>How it connects</h3><p>R1 and R2 sit on the critical path (build and testing). R3 and R10 threaten the rollout waves. Owners come from the WBS, and responses are funded from the contingency in the budget.</p>
+<h3>Decision it supports</h3><p>Where to spend management effort first: integration and compliance work go early, and gates protect the rollout.</p></div><figure><a href="5-risk-register.png"><img src="5-risk-register.png" alt="Risk register (Word)"></a><figcaption>Risk register (Word). Click to enlarge.</figcaption></figure></div></section>
+<section id="budget"><h2>6. Budget</h2><div class="cols"><div class="txt"><h3>What this shows</h3><p>A total of AUD 4.2M: licences 1.1M, hardware 1.3M, build and integration 0.8M, training and change 0.4M, project management, testing and PCI assessment 0.3M, contingency 0.3M.</p>
+<h3>How it connects</h3><p>The total matches the charter objective. Contingency of AUD 300,000 is about 8% of base cost. It can fund the deferral option (about AUD 120,000) but not a failed big-bang cut-over across 180 stores.</p>
+<h3>Decision it supports</h3><p>How much risk the project can absorb, and who approves release of contingency (the CFO).</p></div><figure><a href="6-budget.png"><img src="6-budget.png" alt="Budget (Word)"></a><figcaption>Budget (Word). Click to enlarge.</figcaption></figure></div></section>
+<section id="trello"><h2>7. Trello board</h2><div class="cols"><div class="txt"><h3>What this shows</h3><p>The task board in Trello with three lists (to do, doing, done) and cards for the work packages, coloured by label: red for critical path, blue for project management, green for training.</p>
+<h3>How it connects</h3><p>Cards are named after the WBS work packages, so the board is a working view of the WBS. Critical path cards match the red rows in the schedule.</p>
+<h3>Decision it supports</h3><p>What the team works on next, and what is late or blocked.</p>
+<p><a href="TRELLO_LINK_HERE">Open the live Trello board</a></p></div><figure><a href="8-trello-board.jpg"><img src="8-trello-board.jpg" alt="Project task board (Trello)"></a><figcaption>Project task board (Trello). Click to enlarge.</figcaption></figure></div></section>
+<section id="recommendation"><h2>8. Recommendation</h2><div class="cols"><div class="txt"><h3>Recommendation to the steering committee</h3><p>Approve a phased rollout (pilot of 10 stores, then waves of 40, 70 and 60) instead of a single big-bang cut-over, with these conditions:</p>
+<ol><li><b>Front-load the risky work.</b> Start ERP integration in month 2 and run the PCI DSS assessment alongside user acceptance testing, because R1 and R2 are High and on the critical path.</li><li><b>Use go/no-go gates.</b> Each wave starts only if the previous wave had under 0.5% lost trading hours, 95% of staff trained and no severity-1 defects open.</li><li><b>Protect the freeze date.</b> If slippage uses up the one-week buffer, defer the remaining Wave 3 stores to February 2027 on the legacy POS with extended vendor support (about AUD 120,000, from contingency), instead of deploying into the freeze.</li><li><b>Lock in suppliers early.</b> Put delivery milestones for the POS vendor and a certification plan with the payment provider in place from week one.</li></ol>
+<h3>Why the evidence supports this</h3><p>The risk register shows delivery and compliance risks on the critical path. The schedule shows only one week of buffer before an immovable freeze. The budget has enough contingency for the deferral option but not for a failed big-bang cut-over.</p></div><figure><a href="7-recommendation.png"><img src="7-recommendation.png" alt="How the outputs connect (Word)"></a><figcaption>How the outputs connect (Word). Click to enlarge.</figcaption></figure></div></section>
+</main>
+<footer>Harbourline Retail is a fictional company. All figures are planning assumptions.</footer>
+</body></html>
